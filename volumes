@@ -1,0 +1,2 @@
+--> Criar volumes
+mkdir -p /var/lib/postgresql/data

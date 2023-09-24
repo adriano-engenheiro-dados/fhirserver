@@ -79,6 +79,6 @@ for recurso_fhir in fhir_recursos:
     response = requests.post(url_servidor_fhir, data=json.dumps(recurso_fhir), headers=headers)
 
     if response.status_code == 201:
-        print(f"Recurso FHIR criado com sucesso. ID: {response.json().get('CPF')}")
+        print(f"Patient Resource FHIR criado com sucesso. ID: {response.json().get('identifier')}")
     else:
         print(f"Erro ao criar recurso FHIR. Status: {response.status_code}")
