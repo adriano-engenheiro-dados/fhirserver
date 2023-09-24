@@ -37,8 +37,9 @@ Podemos destacar que a HAPI FHIR implementa em 100% o padrão FHIR.
 Para mais informações da implementação, acessar:
 https://hub.docker.com/r/hapiproject/hapi (Link da Imagem e documentação HAPI FHIR implementado com PostgreSQL)
 
-6 - Sobre o Docker Compose gerado: O arquivo foi criado baseado nas especificações do Docker Compose .yaml, com implementação extra de segurança para
-não expor dados sensíveis de acesso ao banco de dados, adotando outra abordagem, que seria configuração dessas informações
-direto no ambiente de variáveis do sistema operacional. Para isso, foi criado o arquivo enviroments.env que armazena essas informações.
+6 - Sobre o Docker Compose gerado: O arquivo foi criado baseado nas especificações do Docker Compose .yaml 3.8, executado sobre
+engine docker compose 1.29 com implementação extra de segurança para não expor dados sensíveis de acesso ao banco de dados, 
+adotando outra abordagem, que seria configuração dessas informações direto no ambiente de variáveis do sistema operacional. 
+Para isso, foi criado o arquivo enviroments.env que armazena essas informações.
 É necessário executar primeiro este arquivo, para depois executar o Docker Compose.
 
