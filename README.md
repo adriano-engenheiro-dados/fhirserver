@@ -1,5 +1,3 @@
-Aqui está o conteúdo formatado em Markdown:
-
 # fhirserver
 POC para criação de Servidor baseado em FHIR
 
