@@ -1,2 +1,4 @@
 --> Criar volumes
 mkdir -p /var/lib/postgresql/data
+--> Criar volume no Docker
+docker volume create --name=postgres-data
