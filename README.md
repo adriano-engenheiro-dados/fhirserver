@@ -49,8 +49,15 @@ POC para criação de Servidor baseado em FHIR
 7. **Docker Compose do FHIRServer possui volumes para armazenamento das persistências PostgreSQL on-premises**:
    - Necessário executar o arquivo "volumes" se for manter os dados do contêiner localmente.
   
-8. **O ETL foi construído em estrutura Python, com camada Extract, Transform e Load separadas e modularizadas:**:
+8. **O ETL foi construído em estrutura Python, com camada Extract, Transform e Load separadas e modularizadas:**
    - Criadas classes que implementam os dois objetos enviados para o servidor FHIR: PatientResource e PatientObservation;
    - Criado arquivo orquestrador do Pipeline de carga, chamado app.py, que efetua a carga nos Endpoints do Servidor FHIR.
    
    ![Arquitetura da Aplicação](arquitetura_aplicacao.png)
+   
+9. **A Classe PatientResource.py implementa as especificações do profile Resource Patient para as necessidades nacionais:**
+   - A fonte de dados não possui todos os campos que estão propostos no Profile, sendo assim, a classe PatientResource foi adaptada para conter os campos da fonte de dados, em seus respectivos mapeamentos do profile;
+   - Para fins de teste, foram mantidos alguns campos nulos do profile proposto, apenas para averiguar como a API se comportaria ao inserir um paciente incompleto.
+   
+   ![Arquitetura da Aplicação](profile_resource_pacient.png)
+   
