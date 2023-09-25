@@ -45,7 +45,9 @@ POC para criação de Servidor baseado em FHIR
    - Para isso, foi criado o arquivo .env que armazena essas informações.
 
 7. **Docker Compose do FHIRServer possui volumes para armazenamento das persistências PostgreSQL on-premises**:
-   - Necessário executar o arquivo "volumes" se for manter os dados do contêiner localmente.
+   - Se necessário manter volumes de dados do banco, executar o arquivo "volumes" para manter os dados localmente.
+   - Execute cada comando separado: O primento com mkdir para criar o volume local, e o segundo docker volume create --name=postgres-data para criação do volume virtual manualmente (Caso necessário).
+   - Esses procedimentos devem ser executados caso haja algum problema de permissões na execução dos volumens do docker compose.
   
 8. **O ETL foi construído em estrutura Python, com camada Extract, Transform e Load separadas e modularizadas:**
    - Criadas classes que implementam os dois objetos enviados para o servidor FHIR: PatientResource e PatientObservation;
