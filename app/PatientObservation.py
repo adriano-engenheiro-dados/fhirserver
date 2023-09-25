@@ -13,7 +13,6 @@ class PatientObservation:
     def to_dict(self):
         observation_dict = {
             "resourceType": self.resourceType,
-            "id": self.id,
             "status": self.status,
             "subject": self.subject,
             "note": self.note

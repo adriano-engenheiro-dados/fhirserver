@@ -16,7 +16,6 @@ class PatientResource:
 
         fhir_paciente = {
             "resourceType": "Patient",
-            "id": self.cpf,
             "extension": [
                 {
                     "url": "birthCountry",
