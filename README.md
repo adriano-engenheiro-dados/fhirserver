@@ -52,6 +52,8 @@ POC para criação de Servidor baseado em FHIR
 8. **O ETL foi construído em estrutura Python, com camada Extract, Transform e Load separadas e modularizadas:**
    - Criadas classes que implementam os dois objetos enviados para o servidor FHIR: PatientResource e PatientObservation;
    - Criado arquivo orquestrador do Pipeline de carga, chamado app.py, que efetua a carga nos Endpoints do Servidor FHIR.
+   - Foi criado um compilado do código ETL, disponível no diretório /app, propondo a portabilidade do código para qualquer ambiente.
+   - Para execução, necessário acessar o diretório e executar o arquivo app (servidorfhir/app/app) ou ./app
    
    ![Arquitetura da Aplicação](arquitetura_aplicacao.png)
    
@@ -68,8 +70,9 @@ POC para criação de Servidor baseado em FHIR
 ## REFERÊNCIAS
 
    - Desenvolvimento de software assistido por Inteligência artificial baseada em Engine da API GPT-3.5-Turbo (Extensão VSCode: https://marketplace.visualstudio.com/items?itemName=JayBarnes.chatgpt-vscode-plugin);
+   - Docker e Docker Compose (https://www.docker.com/)
    - Padrões e pŕaticas RestFULL baseadas no OpenAPI (https://swagger.io/specification/)
-   - Modelos baseados em JSON (https://swagger.io/specification/)(https://www.json.org/json-en.html)
+   - Modelos baseados em JSON (https://www.json.org/json-en.html)
    - Participantes Rochael Ribeiro, InterSystems e Paulo R. Rades, InterOpera, com apoio da HL7® Brasil, durante o XVI Congresso Brasileiro de Informática em Saúde (https://www.unasus.gov.br/noticia/xvi-congresso-brasileiro-de-informatica-em-saude-recebe-submissoes-de-trabalhos)
    - Documentação disponibilizada por Rochael Ribeiro, InterSystems e Paulo R. Rades, InterOpera, se encontra neste repositório com o nome de HL7_FHIR_PLATAFORMAS_V5_230925_070135_230925_074832.pdf
  
