@@ -17,3 +17,8 @@ class AppTransform:
     @staticmethod
     def transformar_data(data_str):
         return datetime.strptime(data_str, "%d/%m/%Y").strftime("%Y-%m-%d")
+    
+    @staticmethod
+    def to_string(dataframe,campo):
+        dataframe[campo] = dataframe[campo].astype(str)
+        return dataframe
