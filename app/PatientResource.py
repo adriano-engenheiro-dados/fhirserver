@@ -9,6 +9,8 @@ class PatientResource:
         self.telefone = telefone
         self.data_nascimento = data_nascimento
         self.pais_nascimento = pais_nascimento
+        #Calcular o positivo do modelo. Este PatientResource possui 18 campos, mas apenas 10 atributos.
+        self.percentual_preenchido = (lambda x, y: (x / y) * 100)(10, 18)
 
     def to_dict(self):
 
@@ -22,7 +24,7 @@ class PatientResource:
                 },
                 {
                     "url": "registerQuality",
-                    "positiveInt": 80
+                    "positiveInt": self.percentual_preenchido
                 }
             ],
             "identifier": [

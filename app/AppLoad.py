@@ -14,9 +14,9 @@ class AppLoad:
             response = requests.post(self.url_servidor_fhir, data=json.dumps(recurso_fhir), headers=headers)
 
             if response.status_code == 201:
-                print(f"{response.json().get('resourceType')} Resource FHIR criado com sucesso. ID: {response.json().get('id')}.")
+                print(f"{response.json().get('resourceType')} Resource FHIR criado com sucesso. ID: {response.json().get('id')}. CPF: {recurso_fhir['id']}")
             else:
-                print(f"Erro ao criar {response.json().get('resourceType')} Resource FHIR. Status: {response.status_code}")
+                print(f"Erro ao criar {recurso_fhir.json().get('resourceType')} Resource FHIR. Status: {response.status_code}. CPF: {recurso_fhir['id']} ")
 
     def get_patient(self, identifier):
 
