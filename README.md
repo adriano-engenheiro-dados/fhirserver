@@ -59,5 +59,5 @@ POC para criação de Servidor baseado em FHIR
    - A fonte de dados não possui todos os campos que estão propostos no Profile, sendo assim, a classe PatientResource foi adaptada para conter os campos da fonte de dados, em seus respectivos mapeamentos do profile;
    - Para fins de teste, foram mantidos alguns campos nulos do profile proposto, apenas para averiguar como a API se comportaria ao inserir um paciente incompleto.
    
-   ![Arquitetura da Aplicação](profile_resource_pacient.png)![Arquitetura da Aplicação](patientresource_code.png)
+   ![Arquitetura da Aplicação](profile_patientresource.png)
    
