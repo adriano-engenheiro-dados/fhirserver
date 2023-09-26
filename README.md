@@ -69,6 +69,22 @@ POC para criação de Servidor baseado em FHIR
    - A fonte de dados não possui todos os campos que estão propostos no Profile, sendo assim, a classe PatientResource foi adaptada para conter os campos da fonte de dados, em seus respectivos mapeamentos do profile;
    - Para fins de teste, foram mantidos alguns campos nulos do profile proposto, apenas para averiguar como a API se comportaria ao inserir um paciente incompleto.
 
+**Resumo de desenvolvimento**
+
+O desenvolvimento deste Projeto FHIR envolveu várias etapas cruciais, desde a configuração da arquitetura até a implementação de funcionalidades específicas. Cada fase deste projeto representou um desafio empolgante:
+
+- **Configuração de Servidor FHIR (Arquitetura)**: A primeira etapa envolveu a criação de uma arquitetura robusta com base em um servidor Linux Ubuntu. Isso proporcionou um ambiente sólido para a construção do servidor FHIR.
+
+- **Instalação do Docker e Docker Compose**: A instalação do Docker no Ubuntu foi fundamental para o contêiner do servidor FHIR. A configuração cuidadosa das variáveis do sistema operacional e a criação do Docker Compose permitiram que o servidor fosse executado com eficiência.
+
+- **Gerenciamento de Dados com PostgreSQL**: O servidor FHIR dependia de um sistema de gerenciamento de banco de dados PostgreSQL, e a criação de volumes para armazenar dados persistentes foi um passo essencial. Além disso, estudar e pesquisar a documentação da HAPI FHIR permitiu manipular os dados do banco pela interface do servidor.
+
+- **Implementação do ETL (Extract, Transform, Load)**: A estrutura Python do ETL permitiu a extração, transformação e carregamento de dados com eficácia. As classes PatientResource e PatientObservation foram desenvolvidas para atender às especificações do servidor FHIR e garantir a interoperabilidade de dados.
+
+**Implementação do Perfil Resource Patient**
+
+A adaptação do perfil Resource Patient para atender às necessidades nacionais foi um desafio significativo (Além de fazer parte do Bônus). A classe PatientResource foi cuidadosamente projetada para refletir os dados da fonte de forma precisa e compatível com as especificações FHIR.
+
 ## REFERÊNCIAS
 
    - Desenvolvimento de software assistido por Inteligência artificial baseada em Engine da API GPT-3.5-Turbo (Extensão VSCode: https://marketplace.visualstudio.com/items?itemName=JayBarnes.chatgpt-vscode-plugin);
@@ -85,22 +101,6 @@ POC para criação de Servidor baseado em FHIR
 ## Agradecimento
 
 Gostaria de expressar meus sinceros agradecimentos aos organizadores do teste por esta valiosa oportunidade de desenvolver e demonstrar meu trabalho Este projeto representa um esforço individual e um marco importante em minha jornada profissional.
-
-**Resumo de desenvolvimento**
-
-O desenvolvimento deste Projeto FHIR envolveu várias etapas cruciais, desde a configuração da arquitetura até a implementação de funcionalidades específicas. Cada fase deste projeto representou um desafio empolgante:
-
-- **Configuração de Servidor FHIR (Arquitetura)**: A primeira etapa envolveu a criação de uma arquitetura robusta com base em um servidor Linux Ubuntu. Isso proporcionou um ambiente sólido para a construção do servidor FHIR.
-
-- **Instalação do Docker e Docker Compose**: A instalação do Docker no Ubuntu foi fundamental para o contêiner do servidor FHIR. A configuração cuidadosa das variáveis do sistema operacional e a criação do Docker Compose permitiram que o servidor fosse executado com eficiência.
-
-- **Gerenciamento de Dados com PostgreSQL**: O servidor FHIR dependia de um sistema de gerenciamento de banco de dados PostgreSQL, e a criação de volumes para armazenar dados persistentes foi um passo essencial. Além disso, estudar e pesquisar a documentação da HAPI FHIR permitiu manipular os dados do banco pela interface do servidor.
-
-- **Implementação do ETL (Extract, Transform, Load)**: A estrutura Python do ETL permitiu a extração, transformação e carregamento de dados com eficácia. As classes PatientResource e PatientObservation foram desenvolvidas para atender às especificações do servidor FHIR e garantir a interoperabilidade de dados.
-
-**Implementação do Perfil Resource Patient**
-
-A adaptação do perfil Resource Patient para atender às necessidades nacionais foi um desafio significativo (Além de fazer parte do Bônus). A classe PatientResource foi cuidadosamente projetada para refletir os dados da fonte de forma precisa e compatível com as especificações FHIR.
 
 **Agradecimento Especial**
 
